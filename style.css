@@ -1,19 +1,19 @@
 /* =========================================
    Personal site — editorial / luxury minimal
-   Inspired by "One Space Away" aesthetic
+   Matched to "One Space Away" aesthetic
    ========================================= */
 
 :root {
-  /* warm neutral palette */
-  --bg: #f5f1ea;
-  --bg-2: #ebe5da;
+  /* near-white palette, matching One Space Away */
+  --bg: #fdfcfa;          /* very subtle warm white */
+  --bg-2: #f6f4ef;        /* footer / soft section bg */
   --ink: #1c1a17;
   --ink-2: #4a463f;
   --ink-3: #8a857b;
-  --line: #d8d1c2;
+  --line: #e6e1d6;
   --dark-bg: #1c1a17;
-  --dark-ink: #f5f1ea;
-  --accent: #8a6f3a;  /* warm bronze */
+  --dark-ink: #fdfcfa;
+  --accent: #8a6f3a;      /* warm bronze */
 
   --font-display: "Cormorant Garamond", "Times New Roman", serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -50,18 +50,20 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 24px;
 }
 
-.kicker-light { color: rgba(245, 241, 234, 0.55); }
+.kicker-light { color: rgba(253, 252, 250, 0.55); }
 
 /* ================= NAV ================= */
+/* Layout: [logo] [nav-links]  ............................. [cta]
+   Logo and links sit together on the LEFT; CTA on the right. */
 .nav {
   position: sticky;
   top: 0;
   z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 48px;
   padding: 22px var(--gutter);
-  background: rgba(245, 241, 234, 0.85);
+  background: rgba(253, 252, 250, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
@@ -76,7 +78,7 @@ a { color: inherit; text-decoration: none; }
 
 .nav-links {
   display: flex;
-  gap: 36px;
+  gap: 32px;
   list-style: none;
 }
 
@@ -90,6 +92,7 @@ a { color: inherit; text-decoration: none; }
 .nav-links a:hover { color: var(--ink); }
 
 .nav-cta {
+  margin-left: auto;        /* pushes CTA to the right */
   font-size: 13px;
   font-weight: 500;
   padding: 10px 20px;
@@ -104,6 +107,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 720px) {
+  .nav { gap: 16px; }
   .nav-links { display: none; }
 }
 
@@ -269,7 +273,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .focus-card {
-  border-top: 1px solid rgba(245, 241, 234, 0.2);
+  border-top: 1px solid rgba(253, 252, 250, 0.2);
   padding-top: 32px;
 }
 
@@ -295,7 +299,7 @@ a { color: inherit; text-decoration: none; }
 .focus-text {
   font-size: 15px;
   line-height: 1.65;
-  color: rgba(245, 241, 234, 0.7);
+  color: rgba(253, 252, 250, 0.7);
   margin-top: 20px;
 }
 
@@ -322,7 +326,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .section-dark .tag {
-  border-color: rgba(245, 241, 234, 0.3);
+  border-color: rgba(253, 252, 250, 0.3);
   color: var(--dark-ink);
 }
 
