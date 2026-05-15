@@ -7,222 +7,269 @@
   <meta name="description" content="Soomin · Graduate Researcher in Parallel Computing, HPC, and Scientific Software at Georgia Tech." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="grain"></div>
 
-  <main class="container">
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">Soomin —</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#focus">Focus</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Let's connect →</a>
+  </nav>
 
-    <!-- HERO -->
-    <header class="hero">
-      <div class="hero-meta">
-        <span class="dot"></span>
-        <span class="mono">// open to opportunities</span>
-      </div>
-      <h1 class="name">Soomin <span class="lastname">[Last Name]</span></h1>
-      <p class="tagline">
-        Graduate Researcher · <span class="accent">Parallel Computing</span>,
-        <span class="accent">HPC</span>, &amp; <span class="accent">Scientific Software</span>
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <p class="kicker">GRADUATE RESEARCHER · GEORGIA TECH</p>
+    <h1 class="hero-title">
+      Building software <br>
+      for <em>parallel worlds.</em>
+    </h1>
+    <p class="hero-sub">
+      I work on high-performance computing, scientific software,
+      and thermal modeling of cryogenic fluid systems.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">SEE PROJECTS</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch →</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section section-split" id="about">
+    <div class="section-left">
+      <p class="kicker">ABOUT</p>
+      <h2 class="section-title">A short introduction.</h2>
+    </div>
+    <div class="section-right">
+      <h3 class="lead">
+        Computer Science graduate student at Georgia Tech,
+        focused on parallel computing and HPC systems.
+      </h3>
+      <p class="body">
+        My research centers on the thermal modeling of cryogenic fluid systems —
+        building modular Python simulations that couple convection, radiation,
+        and conduction with CFD-derived surrogate models.
       </p>
-      <p class="location mono">Georgia Institute of Technology · Atlanta, GA</p>
+      <p class="body">
+        Outside research, I'm deep in parallel algorithms — MPI collectives,
+        hypercube routing, sample sort — and the engineering craft of making
+        scientific code clean, modular, and fast.
+      </p>
+    </div>
+  </section>
 
-      <nav class="hero-links">
-        <a href="https://github.com/your-username" class="link">GitHub ↗</a>
-        <a href="https://linkedin.com/in/your-handle" class="link">LinkedIn ↗</a>
-        <a href="mailto:you@example.com" class="link">Email ↗</a>
-        <a href="resume.pdf" class="link">Resume ↗</a>
-      </nav>
-    </header>
+  <!-- FOCUS / KEYWORDS -->
+  <section class="section section-dark" id="focus">
+    <p class="kicker kicker-light">FOCUS</p>
+    <h2 class="section-title section-title-light">What I work on.</h2>
 
-    <!-- ABOUT / KEYWORDS -->
-    <section class="section">
-      <div class="section-head">
-        <span class="section-num mono">01</span>
-        <h2 class="section-title">About</h2>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <span class="focus-num">01</span>
+        <h3 class="focus-title">High-Performance Computing</h3>
+        <div class="tags">
+          <span class="tag">MPI</span>
+          <span class="tag">OpenMP</span>
+          <span class="tag">CUDA</span>
+          <span class="tag">PACE ICE</span>
+        </div>
+        <p class="focus-text">
+          Parallel algorithms, collective communication, interconnection
+          network topologies, and distributed memory systems.
+        </p>
       </div>
 
-      <div class="keyword-groups">
-        <div class="kw-group">
-          <h3 class="kw-label mono">focus</h3>
-          <div class="pills">
-            <span class="pill">HPC</span>
-            <span class="pill">Parallel Computing</span>
-            <span class="pill">Scientific Computing</span>
-            <span class="pill">Systems</span>
-            <span class="pill">Numerical Methods</span>
-          </div>
+      <div class="focus-card">
+        <span class="focus-num">02</span>
+        <h3 class="focus-title">Scientific Computing</h3>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">SciPy</span>
+          <span class="tag">C / C++</span>
         </div>
-
-        <div class="kw-group">
-          <h3 class="kw-label mono">research</h3>
-          <div class="pills">
-            <span class="pill pill-accent">Cryogenic Thermal Modeling</span>
-            <span class="pill pill-accent">LH₂ / LNG Fuels</span>
-            <span class="pill pill-accent">Surrogate Models</span>
-            <span class="pill pill-accent">CFD-Derived Heat Transfer</span>
-          </div>
-        </div>
-
-        <div class="kw-group">
-          <h3 class="kw-label mono">currently learning</h3>
-          <div class="pills">
-            <span class="pill pill-ghost">MPI Collectives</span>
-            <span class="pill pill-ghost">Interconnection Networks</span>
-            <span class="pill pill-ghost">Python Software Design</span>
-            <span class="pill pill-ghost">CUDA</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STACK -->
-    <section class="section">
-      <div class="section-head">
-        <span class="section-num mono">02</span>
-        <h2 class="section-title">Stack</h2>
+        <p class="focus-text">
+          Numerical methods, surrogate modeling, nonlinear solvers,
+          and building modular research codebases.
+        </p>
       </div>
 
-      <div class="stack-grid">
-        <div class="stack-col">
-          <h3 class="kw-label mono">languages</h3>
-          <ul class="stack-list">
-            <li>Python</li>
-            <li>C</li>
-            <li>C++</li>
-          </ul>
+      <div class="focus-card">
+        <span class="focus-num">03</span>
+        <h3 class="focus-title">Cryogenic Thermal Modeling</h3>
+        <div class="tags">
+          <span class="tag">LH₂</span>
+          <span class="tag">LNG</span>
+          <span class="tag">CFD</span>
+          <span class="tag">Heat Transfer</span>
         </div>
-        <div class="stack-col">
-          <h3 class="kw-label mono">parallel</h3>
-          <ul class="stack-list">
-            <li>MPI</li>
-            <li>OpenMP</li>
-            <li>CUDA</li>
-          </ul>
-        </div>
-        <div class="stack-col">
-          <h3 class="kw-label mono">scientific</h3>
-          <ul class="stack-list">
-            <li>NumPy</li>
-            <li>SciPy</li>
-            <li>Matplotlib</li>
-          </ul>
-        </div>
-        <div class="stack-col">
-          <h3 class="kw-label mono">tooling</h3>
-          <ul class="stack-list">
-            <li>Git</li>
-            <li>Linux</li>
-            <li>Bash</li>
-          </ul>
-        </div>
+        <p class="focus-text">
+          Heat-leak analysis for liquid hydrogen and liquid methane fuel
+          systems — coupling convection, radiation, and conduction.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- EDUCATION -->
-    <section class="section">
-      <div class="section-head">
-        <span class="section-num mono">03</span>
-        <h2 class="section-title">Education</h2>
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-head">
+      <p class="kicker">PROJECTS</p>
+      <h2 class="section-title">Selected work.</h2>
+    </div>
+
+    <article class="project">
+      <div class="project-meta">
+        <span class="project-num">01 / 03</span>
+        <span class="project-year">2025</span>
       </div>
+      <h3 class="project-title">Cryogenic Thermal Simulation</h3>
+      <p class="project-desc">
+        Modular Python simulation of heat leak in LH₂ and LNG fuel tanks.
+        Couples convection, radiation, and conduction with CFD-derived
+        surrogate models loaded from pickle files, solved with SciPy's fsolve.
+      </p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">SciPy</span>
+        <span class="tag">Surrogate Models</span>
+        <span class="tag">Cryogenics</span>
+      </div>
+      <a href="#" class="project-link">View on GitHub →</a>
+    </article>
 
+    <article class="project">
+      <div class="project-meta">
+        <span class="project-num">02 / 03</span>
+        <span class="project-year">2025</span>
+      </div>
+      <h3 class="project-title">MPI Algorithms on PACE ICE</h3>
+      <p class="project-desc">
+        Implementations and benchmarks of classic parallel algorithms on
+        Georgia Tech's PACE ICE cluster — including Bitonic Sort, sample sort,
+        all-to-all permutation routing on hypercubes, and 2D-partitioned
+        matrix-vector multiplication.
+      </p>
+      <div class="tags">
+        <span class="tag">MPI</span>
+        <span class="tag">C</span>
+        <span class="tag">HPC Cluster</span>
+        <span class="tag">Benchmarking</span>
+      </div>
+      <a href="#" class="project-link">View on GitHub →</a>
+    </article>
+
+    <article class="project">
+      <div class="project-meta">
+        <span class="project-num">03 / 03</span>
+        <span class="project-year">2024</span>
+      </div>
+      <h3 class="project-title">[Project Three]</h3>
+      <p class="project-desc">
+        Replace this with a third project — coursework, a side build, or
+        anything you want to feature.
+      </p>
+      <div class="tags">
+        <span class="tag">Tag</span>
+        <span class="tag">Tag</span>
+        <span class="tag">Tag</span>
+      </div>
+      <a href="#" class="project-link">View on GitHub →</a>
+    </article>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section-split">
+    <div class="section-left">
+      <p class="kicker">EDUCATION</p>
+      <h2 class="section-title">Where I've studied.</h2>
+    </div>
+    <div class="section-right">
       <div class="edu-item">
         <div class="edu-line">
-          <span class="edu-school">Georgia Institute of Technology</span>
-          <span class="edu-date mono">2024 — present</span>
+          <h3 class="edu-school">Georgia Institute of Technology</h3>
+          <span class="edu-date">2024 — Present</span>
         </div>
         <p class="edu-degree">M.S. Computer Science</p>
-        <div class="pills">
-          <span class="pill pill-sm">Parallel Computing</span>
-          <span class="pill pill-sm">HPC</span>
-          <span class="pill pill-sm">Systems</span>
-        </div>
+        <p class="edu-focus">Focus: Parallel Computing, HPC, Systems</p>
       </div>
-
       <div class="edu-item">
         <div class="edu-line">
-          <span class="edu-school">[Undergraduate Institution]</span>
-          <span class="edu-date mono">YYYY — YYYY</span>
+          <h3 class="edu-school">[Undergraduate Institution]</h3>
+          <span class="edu-date">YYYY — YYYY</span>
         </div>
         <p class="edu-degree">B.S. [Field]</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <section class="section">
-      <div class="section-head">
-        <span class="section-num mono">04</span>
-        <h2 class="section-title">Projects &amp; Research</h2>
+  <!-- CONTACT -->
+  <section class="section section-contact" id="contact">
+    <p class="kicker">CONTACT</p>
+    <h2 class="section-title section-title-large">
+      Let's build something <em>fast</em>.
+    </h2>
+    <p class="contact-sub">
+      Open to research collaborations, internships, and full-time roles
+      in HPC, scientific computing, and systems software.
+    </p>
+
+    <div class="contact-grid">
+      <div>
+        <p class="contact-label">SAY HELLO</p>
+        <a href="mailto:you@example.com" class="contact-value">you@example.com</a>
       </div>
-
-      <div class="project-grid">
-
-        <article class="project">
-          <header class="project-head">
-            <h3 class="project-title">Cryogenic Thermal Simulation</h3>
-            <a class="project-link mono" href="#">repo ↗</a>
-          </header>
-          <p class="project-desc">
-            Modular Python simulation of heat leak in LH₂ / LNG fuel systems.
-            Couples convection, radiation, and conduction with CFD-derived surrogate models.
-          </p>
-          <div class="pills">
-            <span class="pill pill-sm">Python</span>
-            <span class="pill pill-sm">SciPy fsolve</span>
-            <span class="pill pill-sm">Surrogate Models</span>
-            <span class="pill pill-sm">Cryogenics</span>
-          </div>
-        </article>
-
-        <article class="project">
-          <header class="project-head">
-            <h3 class="project-title">MPI Algorithms on PACE ICE</h3>
-            <a class="project-link mono" href="#">repo ↗</a>
-          </header>
-          <p class="project-desc">
-            Implementations and benchmarks of classic parallel algorithms
-            on Georgia Tech's PACE ICE cluster.
-          </p>
-          <div class="pills">
-            <span class="pill pill-sm">MPI</span>
-            <span class="pill pill-sm">Bitonic Sort</span>
-            <span class="pill pill-sm">All-to-All</span>
-            <span class="pill pill-sm">Hypercube Routing</span>
-          </div>
-        </article>
-
-        <article class="project">
-          <header class="project-head">
-            <h3 class="project-title">[Project Three]</h3>
-            <a class="project-link mono" href="#">repo ↗</a>
-          </header>
-          <p class="project-desc">
-            Short description — one or two sentences. Replace this with your
-            third project or coursework highlight.
-          </p>
-          <div class="pills">
-            <span class="pill pill-sm">Tag</span>
-            <span class="pill pill-sm">Tag</span>
-            <span class="pill pill-sm">Tag</span>
-          </div>
-        </article>
-
+      <div>
+        <p class="contact-label">FIND ME</p>
+        <a href="https://github.com/Soomin-0201" class="contact-value">GitHub →</a>
+        <a href="https://linkedin.com/in/your-handle" class="contact-value">LinkedIn →</a>
       </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-left mono">
-        <span>© 2026 Soomin</span>
+      <div>
+        <p class="contact-label">BASED IN</p>
+        <p class="contact-value-static">Atlanta, Georgia</p>
       </div>
-      <div class="footer-right">
-        <a href="https://github.com/your-username" class="link">GitHub</a>
-        <a href="https://linkedin.com/in/your-handle" class="link">LinkedIn</a>
-        <a href="mailto:you@example.com" class="link">Email</a>
-      </div>
-    </footer>
+    </div>
+  </section>
 
-  </main>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <a href="#" class="footer-logo">Soomin —</a>
+        <p class="footer-tagline">Parallel computing, HPC, and scientific software.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#focus">Focus</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Elsewhere</h4>
+          <ul>
+            <li><a href="https://github.com/Soomin-0201">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Soomin</span>
+      <span>Atlanta, Georgia</span>
+    </div>
+  </footer>
+
 </body>
 </html>
