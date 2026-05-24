@@ -27,24 +27,21 @@
   <!-- HERO -->
   <header class="hero" id="home">
     <p class="kicker">GRADUATE RESEARCHER · GEORGIA TECH</p>
-    <h1 class="hero-title">
-      Building software <br>
-      for <em>parallel worlds.</em>
-    </h1>
-    <p class="hero-sub">
-      I work on high-performance computing, scientific software,
-      and thermal modeling of cryogenic fluid systems.
-    </p>
+
+    <div class="hero-banner">
+      <img class="hero-bg-gif" src="assets/species2.gif" alt="Evaporation of Droplet" />
+      <div class="hero-banner-overlay"></div>
+      <h1 class="hero-title">
+        <span class="type-line">
+          <span class="typed-text"></span><span class="cursor">|</span>
+        </span>
+      </h1>
+    </div>
+
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">SEE PROJECTS</a>
       <a href="#contact" class="btn btn-ghost">Get in touch →</a>
     </div>
-
-    <!-- GIF showcase -->
-    <figure class="hero-media">
-      <img src = "assets/species2.gif" alt = "Evaporation of Droplet" />
-      <figcaption>Droplet evaporation</figcaption>
-    </figure>
   </header>
 
   <!-- ABOUT -->
@@ -276,6 +273,51 @@
       <span>Atlanta, Georgia</span>
     </div>
   </footer>
+
+  <script>
+    const words = ["CFD", "Physics", "Multiphase Modeling", "Thermal Modeling"];
+    const typedEl = document.querySelector(".typed-text");
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    const TYPE_SPEED = 120;      // ms per character while typing
+    const DELETE_SPEED = 200;     // ms per character while deleting
+    const PAUSE_AFTER_TYPE = 1400;  // pause when word is fully typed
+    const PAUSE_AFTER_DELETE = 300; // pause before next word
+
+    function tick() {
+      const currentWord = words[wordIndex];
+
+      if (!isDeleting) {
+        // typing
+        typedEl.textContent = currentWord.slice(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentWord.length) {
+          isDeleting = true;
+          setTimeout(tick, PAUSE_AFTER_TYPE);
+          return;
+        }
+        setTimeout(tick, TYPE_SPEED);
+      } else {
+        // deleting
+        typedEl.textContent = currentWord.slice(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          setTimeout(tick, PAUSE_AFTER_DELETE);
+          return;
+        }
+        setTimeout(tick, DELETE_SPEED);
+      }
+    }
+
+  tick();
+  </script>
 
 </body>
 </html>
