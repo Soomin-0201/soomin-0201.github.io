@@ -236,7 +236,7 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 1fr 1.8fr;
   gap: 80px;
-  align-items: start;
+  align-items: center;
 }
 
 .section-left .section-title {
@@ -654,4 +654,48 @@ a { color: inherit; text-decoration: none; }
     max-width: 240px;
     margin-top: 24px;
   }
+}
+
+/* ================= VALUES BLOCK ================= */
+.values {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.values .kicker {
+  margin-bottom: 20px;
+}
+
+.values-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 0;
+}
+
+.values-list li {
+  font-family: "ADLaM Display", sans-serif;
+  font-size: clamp(20px, 2vw, 20px);
+  font-weight: 400;
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.value-icon {
+  font-size: 1em;
+  line-height: 1;
+}
+
+@media (max-width: 720px) {
+  .values { margin-top: 40px; padding-top: 24px; }
+  .values-list { 
+    flex-direction: column;
+    align-items: flux-start;
+    gap: 12px;
+  }
+  .values-list li { font-size: 18px; }
 }
