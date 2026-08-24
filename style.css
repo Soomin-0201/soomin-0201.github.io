@@ -352,10 +352,6 @@ a { color: inherit; text-decoration: none; }
 .project {
   padding: 48px 0;
   border-top: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 48px;
-  align-items: start;
   transition: padding-left 0.3s ease;
 }
 
@@ -365,23 +361,11 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--line);
 }
 
-.project-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.project-num {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 14px;
-  color: var(--accent);
-}
-
 .project-year {
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.15em;
   color: var(--ink-3);
+  margin-bottom: 16px;
 }
 
 .project-title {
@@ -402,8 +386,6 @@ a { color: inherit; text-decoration: none; }
   max-width: 620px;
 }
 
-.project .tags { margin-bottom: 24px; }
-
 .project-link {
   font-size: 13px;
   font-weight: 500;
@@ -411,6 +393,7 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--ink);
   padding-bottom: 2px;
   transition: color 0.2s ease, border-color 0.2s ease;
+  display: inline-block;
 }
 
 .project-link:hover {
@@ -418,10 +401,76 @@ a { color: inherit; text-decoration: none; }
   border-color: var(--accent);
 }
 
+.project-gifs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.project-gif-item {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #f0ede8;
+  max-width: 700px;
+}
+
+.project-gif-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-gif-item figcaption {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  padding: 8px 14px;
+  border-top: 1px solid var(--line);
+}
+
 @media (max-width: 820px) {
-  .project { grid-template-columns: 1fr; gap: 20px; }
   .project:hover { padding-left: 0; }
 }
+
+@media (max-width: 620px) {
+  .project-gifs {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= PROJECT DETAILS LIST ================= */
+.project-details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.project-details li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.detail-label {
+  font-family: "ADLaM Display", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.detail-text {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  padding-left: 28px;
+}
+
 
 /* ================= EDUCATION ================= */
 .edu-item {
