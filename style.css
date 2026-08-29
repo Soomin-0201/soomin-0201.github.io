@@ -469,6 +469,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.65;
   color: var(--ink-2);
   padding-left: 28px;
+  list-style:disc;
 }
 
 

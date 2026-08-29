@@ -131,73 +131,107 @@
     </div>
 
     <article class="project">
-      <div class="project-meta">
-        <span class="project-year">2026 - present</span>
-      </div>
       <h3 class="project-title">Sloshing and Boil-off of Cryogenic Fuel</h3>
-      <p class="project-desc">
-        Modular Python simulation of heat leak in LH₂ and LNG fuel tanks.
-        Couples convection, radiation, and conduction with CFD-derived
-        surrogate models loaded from pickle files, solved with SciPy's fsolve.
-      </p>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">SciPy</span>
-        <span class="tag">Surrogate Models</span>
-        <span class="tag">Cryogenics</span>
-      </div>
+      <ul class="project-details">
+        <li>
+          <span class="detail-label">⚠️ Challenges</span>
+          <ul class="detail-text">
+            <li>Sloshing occurs in many partially-filled fuel tanks, such as launch vehicles.</li>
+            <li>Sloshing triggers dynamic forces, stresses tank structures, and complicates the thermodynamic inside the tank.</li>
+            <li>Cryogenic fuels with extremely low storage temperatures require stricter analysis of sloshing's effects on thermodynamics.</li>
+          </ul>
+        </li>
+        <li>
+          <span class="detail-label">🎯 Goal</span>
+          <ul class="detail-text">Analyze the effects of sloshing on cryogenic fuel boil-off.</ul>
+        </li>
+        <li>
+          <span class="detail-label">🔬 Approach</span>
+          <ul class="detail-text">CFD modeling of slosing and boil-off of cryogenic fuel inside the cryo-tank - Volume of Fluid approach. </ul>
+        </li>
+      </ul>
+    <div class="project-gifs">
+      <figure class="project-gif-item" style="max-width: 500px;">
+        <img src="assets/coarseMesh_liqAndGas.gif"/>
+        <figcaption>Sloshing of 50%-filled tank in coarse mesh </figcaption>
+      </figure>
+      <figure class="project-gif-item" style="max-width: 500px;">
+        <img src="assets/finerMesh_alpha.gif"/>
+        <figcaption>Sloshing of 90%-filled tank in fine mesh</figcaption>
+      </figure>
+      <figure class="project-gif-item" style="max-width: 500px;">
+        <img src="assets/finerMesh_pressure.gif"/> 
+        <figcaption>Pressure changes of 90%-filled tank in fine mesh</figcaption>
+      </figure>
+    </div>
+
+    </article>
+    <article class="project">
+      <h3 class="project-title">Full-Mission Aircraft Analysis of Cryogenic Fuel Boil-off</h3>
+      <ul class="project-details">
+        <span class="detail-label">⚠️ Challenges</span>
+        <ul class="detail-text">
+          <li>For aircraft using cryogenic fuel, boil-off and pressure fluctuations pose design challenges.</li>
+          <li>The evolution of temperature and pressure inside the cryogenic fuel tank throughout a full flight mission is poorly understood.</li>
+        </ul>
+        <sapn class="detail-label">🎯 Goal</span>
+        <ul class="detail-text">
+          <li>Estimate the temperature and pressure of cryo-tank and boil-off generation during the aircraft mission.</li>
+        </ul>
+        <span class="detail-label">🔬 Approach</span>
+        <ul class="detail-text">
+          <li>Developed a lumped model of a cryogenic fuel tank coupled with a flight mission profile.</li>
+        </ul>
+      </ul>
+    <div class="project-gifs">
+      <figure class="project-gif-item" style="max-width: 1200px;">
+        <img src="assets/tank_animation.gif"/>
+        <figcaption>Thermal modeling of LNG boil-off during the flight mission profile </figcaption>
+      </figure>
+    </div>
+
       <a href="#" class="project-link">View on GitHub →</a>
     </article>
 
-  <article class="project">
+    <article class="project">
     <h3 class="project-title">Aluminum Propellant Combustion — Nozzle CFD</h3>
     <ul class="project-details">
       <li>
         <span class="detail-label">⚠️ Challenges</span>
-        <span class="detail-text">Incomplete combustion of aluminum propellants in solid rocket motors. </span>
+        <ul class="detail-text">
+          <li>Aluminum propellant is an energetic material as solid propellants for solid rocket motors.</li>
+          <li>But due to its too high boiling point, aluminum combustion can be incomplete.</li>
+          <li>This reduces the rocket performance.</li>
+        </ul>
       </li>
       <li>
         <span class="detail-label">🎯 Goal</span>
-        <span class="detail-text">Understand aluminum combustion physics and predict burning time of aluminum droplets.</span>
+        <ul class="detail-text">Understand aluminum combustion physics and predict burning time of aluminum droplets.</ul>
       </li>
       <li>
         <span class="detail-label">🔬 Approach</span>
-        <span class="detail-text">CFD modeling inside a rocket engine nozzle — whole-nozzle via a Lagrangian dispersed-phase approach; single-droplet via the Volume of Fluid method.</span>
+        <ul class="detail-text">
+          <li>CFD modeling of the full rocket engine nozzle with dispersed burning aluminum particles - Lagrangian-Eulerian approach. </li> 
+          <li>CFD modeling of a single droplet under combustion conditions - Volume of Fluid approach. </li>
+        </ul>
       </li>
     </ul>
     <div class="project-gifs">
       <figure class="project-gif-item">
-        <img src="assets/massFrac.gif" alt="Mass Fraction of Aluminum — nozzle CFD simulation" />
+        <img src="assets/massFrac.gif"/>
         <figcaption>Mass fraction of Al / AlO₂</figcaption>
       </figure>
       <figure class="project-gif-item">
-        <img src="assets/temp.gif" alt="Temperature and Mach Number — nozzle CFD simulation" />
+        <img src="assets/temp.gif"/>
         <figcaption>Temperature (K) &amp; Mach number</figcaption>
       </figure>
       <figure class="project-gif-item">
-        <img src="assets/VOF.gif" alt="Temperature and Mach Number — nozzle CFD simulation" /> 
+        <img src="assets/VOF.gif"/> 
         <figcaption>Temperature (K) &amp; Mach number</figcaption>
       </figure>
 
     </div>
   </article>
-
-    <article class="project">
-      <div class="project-meta">
-        <span class="project-year">2024</span>
-      </div>
-      <h3 class="project-title">[Project Three]</h3>
-      <p class="project-desc">
-        Replace this with a third project — coursework, a side build, or
-        anything you want to feature.
-      </p>
-      <div class="tags">
-        <span class="tag">Tag</span>
-        <span class="tag">Tag</span>
-        <span class="tag">Tag</span>
-      </div>
-      <a href="#" class="project-link">View on GitHub →</a>
-    </article>
   </section>
 
   <!-- EDUCATION -->
@@ -212,15 +246,21 @@
           <h3 class="edu-school">Georgia Institute of Technology</h3>
           <span class="edu-date">2024 — Present</span>
         </div>
-        <p class="edu-degree">M.S. Computer Science</p>
-        <p class="edu-focus">Focus: Parallel Computing, HPC, Systems</p>
+        <p class="edu-degree">Ph.D. Computational Science and Engineering</p>
       </div>
       <div class="edu-item">
         <div class="edu-line">
-          <h3 class="edu-school">[Undergraduate Institution]</h3>
-          <span class="edu-date">YYYY — YYYY</span>
+          <h3 class="edu-school">University of Central Florida</h3>
+          <span class="edu-date">2022 — 2024</span>
         </div>
-        <p class="edu-degree">B.S. [Field]</p>
+        <p class="edu-degree">M.S. Aerospace Engineering</p>
+      </div>
+      <div class="edu-item">
+        <div class="edu-line">
+          <h3 class="edu-school">Dongguk University</h3>
+          <span class="edu-date">2013 — 2021</span>
+        </div>
+        <p class="edu-degree">B.S. and M.S. Chemical Engineering</p>
       </div>
     </div>
   </section>
@@ -232,14 +272,13 @@
       Let's build something <em>fast</em>.
     </h2>
     <p class="contact-sub">
-      Open to research collaborations, internships, and full-time roles
-      in HPC, scientific computing, and systems software.
+      
     </p>
 
     <div class="contact-grid">
       <div>
         <p class="contact-label">SAY HELLO</p>
-        <a href="mailto:you@example.com" class="contact-value">you@example.com</a>
+        <a href="mailto:you@example.com" class="contact-value">soomin.lim@gatech.edu</a>
       </div>
       <div>
         <p class="contact-label">FIND ME</p>
